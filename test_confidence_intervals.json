@@ -1,0 +1,62 @@
+[
+  {
+    "scenario": "1. Clean PDF with Good OCR",
+    "ocr_error_rate": 0.01,
+    "parse_success_rate": 0.95,
+    "ocr_confidence": 0.98,
+    "parsed_confidence": 0.95,
+    "similarity": 0.9906103286384976,
+    "decision": "parsed",
+    "final_confidence": 0.95,
+    "reason": "High similarity (99.06%), prefer parsed (cleaner)",
+    "errors_introduced": 2
+  },
+  {
+    "scenario": "2. Scanned Document (OCR Only)",
+    "ocr_error_rate": 0.05,
+    "parse_success_rate": 0.0,
+    "ocr_confidence": 0.9,
+    "parsed_confidence": 0.0,
+    "similarity": 0.0,
+    "decision": "ocr",
+    "final_confidence": 0.9,
+    "reason": "Only OCR has content (scanned PDF)",
+    "errors_introduced": 8
+  },
+  {
+    "scenario": "3. Old English Text (Higher OCR Error)",
+    "ocr_error_rate": 0.08,
+    "parse_success_rate": 0.7,
+    "ocr_confidence": 0.84,
+    "parsed_confidence": 0.95,
+    "similarity": 0.9683544303797469,
+    "decision": "parsed",
+    "final_confidence": 0.95,
+    "reason": "High similarity (96.84%), prefer parsed (cleaner)",
+    "errors_introduced": 12
+  },
+  {
+    "scenario": "4. Poor Quality Scan (High OCR Error)",
+    "ocr_error_rate": 0.15,
+    "parse_success_rate": 0.0,
+    "ocr_confidence": 0.7,
+    "parsed_confidence": 0.0,
+    "similarity": 0.0,
+    "decision": "ocr",
+    "final_confidence": 0.7,
+    "reason": "Only OCR has content (scanned PDF)",
+    "errors_introduced": 26
+  },
+  {
+    "scenario": "5. Medium Similarity Conflict",
+    "ocr_error_rate": 0.06,
+    "parse_success_rate": 0.9,
+    "ocr_confidence": 0.88,
+    "parsed_confidence": 0.95,
+    "similarity": 0.9906103286384976,
+    "decision": "parsed",
+    "final_confidence": 0.95,
+    "reason": "High similarity (99.06%), prefer parsed (cleaner)",
+    "errors_introduced": 10
+  }
+]

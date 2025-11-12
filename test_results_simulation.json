@@ -1,0 +1,35 @@
+{
+  "modern_english": {
+    "doc_name": "Modern English",
+    "total_pages": 3,
+    "avg_confidence": 0.9499999999999998,
+    "avg_accuracy": 1.0,
+    "source_distribution": {
+      "parsed": 3
+    },
+    "confidence_intervals": {
+      "High (>90%)": 3,
+      "Medium (70-90%)": 0,
+      "Low (<70%)": 0
+    }
+  },
+  "old_english": {
+    "doc_name": "Old English",
+    "total_pages": 4,
+    "avg_confidence": 0.9406432098639581,
+    "avg_accuracy": 0.9958298926507019,
+    "source_distribution": {
+      "ocr": 1,
+      "parsed": 3
+    },
+    "confidence_intervals": {
+      "High (>90%)": 4,
+      "Medium (70-90%)": 0,
+      "Low (<70%)": 0
+    }
+  },
+  "comparison": {
+    "confidence_difference": 0.009356790136041737,
+    "accuracy_difference": 0.004170107349298124
+  }
+}

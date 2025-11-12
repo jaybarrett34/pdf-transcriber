@@ -1,0 +1,29 @@
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+websockets==12.0
+
+# OCR and Document Processing
+paddleocr==2.7.3
+paddlepaddle==2.6.0
+PyMuPDF==1.23.26
+python-pptx==0.6.23
+Pillow==10.2.0
+pdf2image==1.17.0
+
+# NLP and ML
+sentence-transformers==2.3.1
+torch==2.1.2
+transformers==4.37.2
+
+# Text processing
+difflib
+python-Levenshtein==0.25.0
+
+# Ollama client
+ollama==0.1.6
+
+# Utilities
+pydantic==2.5.3
+aiofiles==23.2.1
+pyyaml==6.0.1

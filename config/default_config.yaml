@@ -1,0 +1,60 @@
+# PDF Transcriber Configuration
+
+# Server settings
+server:
+  host: "127.0.0.1"
+  port: 8000
+
+# OCR settings
+ocr:
+  engine: "paddleocr"
+  languages: ["en", "spanish", "chinese_cht", "ch"]  # English, Spanish, Traditional Chinese, Simplified Chinese
+  use_gpu: false  # Set to true if GPU available
+  confidence_threshold: 0.6
+
+# Parser settings
+parser:
+  extract_images: false
+  preserve_layout: true
+
+# Reconciliation settings
+reconciliation:
+  similarity_threshold: 0.85  # If similarity above this, prefer parsed text
+  use_semantic_check: true
+  semantic_model: "sentence-transformers/all-MiniLM-L6-v2"
+  use_ollama_for_conflicts: true
+  conflict_threshold: 0.4  # If similarity below this, use heavy reconciliation
+
+# Ollama settings
+ollama:
+  enabled: true
+  base_url: "http://localhost:11434"
+  default_model: "llama2:7b"  # Configurable model
+  cleanup_model: "llama2:7b"
+  temperature: 0.3
+  timeout: 120
+
+# Output settings
+output:
+  default_format: "markdown"
+  include_metadata: true
+  include_confidence_scores: false
+  page_separator: "\n\n---\n\n"
+
+# Processing settings
+processing:
+  max_concurrent: 3
+  chunk_size: 5  # Process N pages at a time
+  temp_dir: "backend/temp"
+  upload_dir: "backend/uploads"
+
+# Supported file types
+supported_formats:
+  - "pdf"
+  - "png"
+  - "jpg"
+  - "jpeg"
+  - "pptx"
+  - "ppt"
+  - "tiff"
+  - "bmp"
